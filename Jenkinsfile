@@ -9,14 +9,14 @@ pipeline{
             steps{
                 checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Sof-1215/Lab1Tingeso']])
                 dir("tingesoProyect"){
-                    sh "mvn clean install"
+                    bat "mvn clean install"
                 }
             }
         }
         stage("Test"){
             steps{
                 dir("tingesoProyect"){
-                    sh "mvn test"
+                    bat "mvn test"
                 }
             }
         }        
@@ -25,8 +25,8 @@ pipeline{
                 dir("tingesoProyect"){
                     script{
                          withDockerRegistry(credentialsId: 'docker-credentials'){
-                            sh "docker build -t sof1215/tingesoproyect ."
-                            sh "docker push sof1215/tingesoproyect"
+                            bat "docker build -t sof1215/tingesoproyect ."
+                            bat "docker push sof1215/tingesoproyect"
                         }
                     }                    
                 }
