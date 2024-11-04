@@ -1,8 +1,5 @@
 pipeline{
     agent any
-    environment {
-        JAVA_HOME = 'C:\Program Files\Java\jdk-17'
-    }
     tools{
         maven "maven"
 
