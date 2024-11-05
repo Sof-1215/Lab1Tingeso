@@ -10,35 +10,28 @@ pipeline {
         DB_DRIVER = 'org.postgresql.Driver'
     }
     stages {
-        stage("Build JAR File") {
-            steps {
-                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Sof-1215/Lab1Tingeso']])
-                dir("tingesoProyect") {
-                    bat "mvn clean install"
-                }
-            }
-        }
-        stage("Database Connection Test") {
+        stage("Connect to Database") {
             steps {
                 script {
-                    // Obtención de las credenciales de la base de datos
-                    def dbUser = 'postgres'  // Asegúrate de que esta ID es correcta
-                    def dbPassword = 'Silvestre9+' // Asegúrate de que esta ID es correcta
+                    // Asignación directa de usuario y contraseña
+                    def dbUser = 'postgres'
+                    def dbPassword = 'Silvestre9+' // Usar con precaución
                     
                     // Intentar crear la conexión
-                    def sql
                     try {
                         sql = groovy.sql.Sql.newInstance(DB_URL, dbUser, dbPassword, DB_DRIVER)
                         echo 'Conexión a la base de datos establecida correctamente.'
                     } catch (Exception e) {
                         error "No se pudo establecer la conexión a la base de datos: ${e.message}"
-                    } finally {
-                        // Cerrar la conexión si fue creada
-                        if (sql) {
-                            sql.close()
-                            echo 'Conexión a la base de datos cerrada.'
-                        }
                     }
+                }
+            }
+        }
+        stage("Build JAR File") {
+            steps {
+                checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/Sof-1215/Lab1Tingeso']])
+                dir("tingesoProyect") {
+                    bat "mvn clean install"
                 }
             }
         }
@@ -61,6 +54,16 @@ pipeline {
                 }
             }
         }
+        stage("Disconnect from Database") {
+            steps {
+                script {
+                    // Cerrar la conexión si fue creada
+                    if (sql) {
+                        sql.close()
+                        echo 'Conexión a la base de datos cerrada.'
+                    }
+                }
+            }
+        }
     }
 }
-
