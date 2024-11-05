@@ -16,7 +16,7 @@ pipeline {
                     // Ejecutar un comando SQL simple para verificar la conexión
                     bat """
                     set PGPASSWORD=${dbPassword}
-                    psql -h ${dbUrl} -U ${dbUser} -d ${dbName} -c 'SELECT 1;'
+                    psql -h ${dbUrl} -U ${dbUser} -d ${dbName} -c "SELECT 1;"
                     unset PGPASSWORD
                     """
                 }
