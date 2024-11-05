@@ -8,9 +8,16 @@ pipeline {
         stage("Connect to Database") {
             steps {
                 script {
-                    // Ejecutar un comando de prueba para verificar la conexión
+                    def dbUser = 'postgres' // Usuario de la base de datos
+                    def dbPassword = 'Silvestre9+' // Contraseña de la base de datos
+                    def dbUrl = 'localhost' // Host de la base de datos
+                    def dbName = 'TingesoDB' // Nombre de la base de datos
+
+                    // Ejecutar un comando SQL simple para verificar la conexión
                     bat """
-                    psql -h localhost -U postgres -d TingesoDB -c 'SELECT 1;'
+                    set PGPASSWORD=${dbPassword}
+                    psql -h ${dbUrl} -U ${dbUser} -d ${dbName} -c 'SELECT 1;'
+                    unset PGPASSWORD
                     """
                 }
             }
@@ -52,4 +59,5 @@ pipeline {
         }
     }
 }
+
 
