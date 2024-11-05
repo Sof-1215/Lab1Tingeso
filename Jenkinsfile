@@ -4,26 +4,14 @@ pipeline {
         maven "maven"
         jdk "jdk-17"
     }
-    environment {
-        // Variables de entorno para la conexión a la base de datos
-        DB_URL = 'jdbc:postgresql://localhost:5432/TingesoDB'
-        DB_DRIVER = 'org.postgresql.Driver'
-    }
     stages {
         stage("Connect to Database") {
             steps {
                 script {
-                    // Asignación directa de usuario y contraseña
-                    def dbUser = 'postgres'
-                    def dbPassword = 'Silvestre9+' // Usar con precaución
-                    
-                    // Intentar crear la conexión
-                    try {
-                        sql = groovy.sql.Sql.newInstance(DB_URL, dbUser, dbPassword, DB_DRIVER)
-                        echo 'Conexión a la base de datos establecida correctamente.'
-                    } catch (Exception e) {
-                        error "No se pudo establecer la conexión a la base de datos: ${e.message}"
-                    }
+                    // Ejecutar un comando de prueba para verificar la conexión
+                    bat """
+                    psql -h localhost -U postgres -d TingesoDB -c 'SELECT 1;'
+                    """
                 }
             }
         }
@@ -57,13 +45,11 @@ pipeline {
         stage("Disconnect from Database") {
             steps {
                 script {
-                    // Cerrar la conexión si fue creada
-                    if (sql) {
-                        sql.close()
-                        echo 'Conexión a la base de datos cerrada.'
-                    }
+                    // No es necesario cerrar la conexión al usar comandos directos
+                    echo 'Conexión a la base de datos gestionada mediante comandos.'
                 }
             }
         }
     }
 }
+
