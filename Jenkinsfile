@@ -17,7 +17,7 @@ pipeline {
                     bat """
                     set PGPASSWORD=${dbPassword}
                     psql -h ${dbUrl} -U ${dbUser} -d ${dbName} -c "SELECT 1;"
-                    unset PGPASSWORD
+                    set PGPASSWORD=
                     """
                 }
             }
