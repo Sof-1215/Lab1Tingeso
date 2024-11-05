@@ -5,6 +5,8 @@ import org.junit.jupiter.api.Test;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
+import org.springframework.boot.test.autoconfigure.web.servlet.WebMvcTest;
+import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.web.multipart.MultipartFile;
 import tingeso.tingesoProyect.entities.LoanSolicitudeEntity;
 import tingeso.tingesoProyect.repositories.LoanSolicitudeRepository;
@@ -13,9 +15,10 @@ import java.io.IOException;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.mockito.Mockito.*;
 
+@WebMvcTest(LoanSolicitudeService.class)
 class LoanSolicitudeServiceTest {
 
-    @Mock
+    @MockBean
     private LoanSolicitudeRepository loanSolicitudeRepository;
 
     @InjectMocks
