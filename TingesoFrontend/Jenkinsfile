@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        DOCKER_CONTEXT = "desktop-linux" // Cambia esto a tu contexto si es otro
+        DOCKER_CONTEXT = "default" // Cambia esto a tu contexto si es otro
     }
     stages {
         stage("Build Frontend") {
