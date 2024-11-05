@@ -20,17 +20,18 @@ pipeline{
                 }
             }
         }        
-        stage("Build and Push Docker Image"){
-            steps{
-                dir("tingesoProyect"){
-                    script{
-                         withDockerRegistry(credentialsId: 'docker-credentials'){
-                            bat "docker build -t sof1215/tingesoproyect ."
-                            bat "docker push sof1215/tingesoproyect"
-                        }
-                    }                    
-                }
+        stage("Build and Push Docker Image") {
+            steps {
+                dir("tingesoProyect") {
+                script {
+                    // Construir la imagen
+                    bat "docker build -t sof1215/tingesoproyect ."
+                    // Subir la imagen al registro
+                    bat "docker push sof1215/tingesoproyect"
             }
         }
+    }
+}
+
     }
 }
