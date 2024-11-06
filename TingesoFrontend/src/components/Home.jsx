@@ -54,7 +54,7 @@ const Home = () => {
         </div>
       ) : (
         <div>
-          <p>This is the principal page, you can carry out credit simulations and request different types of loans depending on what you need.</p>
+          <p>This is the main page, you can carry out credit simulations and request different types of loans depending on what you need.</p>
           <p>Log in and explore our diffrent offers and benefits for our clients</p>
           <button className='button-style' onClick={goToLogin}>Login</button>
           <p>Don't have an account?</p>
