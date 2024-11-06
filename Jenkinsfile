@@ -25,9 +25,9 @@ pipeline{
                 dir("tingesoProyect") {
                 script {
                     // Construir la imagen
-                    bat "docker build -t sof1215/tingesoproyect ."
+                    bat "docker build -t sof1215/tingesoproyect:latest ."
                     // Subir la imagen al registro
-                    bat "docker push sof1215/tingesoproyect"
+                    bat "docker push sof1215/tingesoproyect:latest"
             }
         }
     }
