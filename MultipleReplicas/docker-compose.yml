@@ -103,7 +103,7 @@ services:
     environment:      
       POSTGRES_PASSWORD: Silvestre9+
       POSTGRES_USER: postgres
-      POSTGRES_DB: TingesoDB
+      #POSTGRES_DB: TingesoDB
     ports:
       - 5435:5432
 
