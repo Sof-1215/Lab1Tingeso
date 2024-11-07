@@ -5,19 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="653486bd-91f4-42e7-9287-f95122eea110" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../TingesoFrontend/Jenkinsfile" beforeDir="false" afterPath="$PROJECT_DIR$/../TingesoFrontend/Jenkinsfile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TingesoFrontend/dist/assets/index-Cjrw1QCR.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TingesoFrontend/dist/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../TingesoFrontend/dist/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/32abf1fb-9e1a-4278-b986-96e509d2c785/storage_v2/_src_/database/TingesoDB.cadFsg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/32abf1fb-9e1a-4278-b986-96e509d2c785/storage_v2/_src_/database/TingesoDB.cadFsg/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-tingeso.tingesoProyect.services.LoanSolicitudeServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-tingeso.tingesoProyect.services.LoanSolicitudeServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-tingeso.tingesoProyect.services.MortgageLoanServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-tingeso.tingesoProyect.services.MortgageLoanServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-tingeso.tingesoProyect.services.UserServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-tingeso.tingesoProyect.services.UserServiceTest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/tingeso.tingesoProyect.services.LoanSolicitudeServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/tingeso.tingesoProyect.services.LoanSolicitudeServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/tingeso.tingesoProyect.services.MortgageLoanServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/tingeso.tingesoProyect.services.MortgageLoanServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/surefire-reports/tingeso.tingesoProyect.services.UserServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/tingeso.tingesoProyect.services.UserServiceTest.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tingesoProyect.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/tingesoProyect.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/tingesoProyect.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/tingesoProyect.jar.original" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,7 +36,7 @@
     "Spring Boot.TingesoProyectApplication.executor": "Run",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/Gamer/Documents/GitHub/Lab1Tingeso/tingesoProyect",
+    "last_opened_file_path": "C:/Users/Gamer/Desktop/Lab1Tingeso-main/tingesoProyect",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -103,7 +91,7 @@
       <workItem from="1730911854635" duration="3055000" />
       <workItem from="1730918768824" duration="29000" />
       <workItem from="1730929477647" duration="373000" />
-      <workItem from="1731011378199" duration="750000" />
+      <workItem from="1731011378199" duration="1537000" />
     </task>
     <servers />
   </component>
