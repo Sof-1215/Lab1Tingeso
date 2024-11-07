@@ -23,84 +23,54 @@ const Simulator = () => {
         event.preventDefault();
 
         const P = parseFloat(amount);
-        const r = (parseFloat(interestRate) / 100);
-        let n = parseInt(termYears) * 12;
-        const pValue = parseInt(propertyValue);
+        const r = (parseFloat(interestRate) / 100) / 12; // Monthly interest rate
+        const n = parseInt(termYears) * 12; // Total number of payments in months
+        const pValue = parseFloat(propertyValue);
         const loanTypeValue = parseInt(loanType);
+        
         let maxAmount;
-
-
 
         if (r === 0) {
             setMonthlyPayment(P / n);
             return;
         }
 
-        if (loanTypeValue === 1) {
-            maxAmount = pValue * 0.8;
-            if (termYears > 30) {
-                alert('The maximum term for a first home loan is 30 years');
+        switch (loanTypeValue) {
+            case 1:
+                maxAmount = pValue * 0.8;
+                if (termYears > 30 || r * 12 < 0.025 || r * 12 > 0.05 || P > maxAmount) {
+                    alert('Invalid values: For first home loans, max 30 years, 2.5%-5.0% interest, 80% of property value.');
+                    return;
+                }
+                break;
+            case 2:
+                maxAmount = pValue * 0.7;
+                if (termYears > 20 || r * 12 < 0.04 || r * 12 > 0.06 || P > maxAmount) {
+                    alert('Invalid values: For second home loans, max 20 years, 4.0%-6.0% interest, 70% of property value.');
+                    return;
+                }
+                break;
+            case 3:
+                maxAmount = pValue * 0.6;
+                if (termYears > 25 || r * 12 < 0.05 || r * 12 > 0.07 || P > maxAmount) {
+                    alert('Invalid values: For commercial property loans, max 25 years, 5.0%-7.0% interest, 60% of property value.');
+                    return;
+                }
+                break;
+            case 4:
+                maxAmount = pValue * 0.5;
+                if (termYears > 15 || r * 12 < 0.045 || r * 12 > 0.06 || P > maxAmount) {
+                    alert('Invalid values: For remodeling loans, max 15 years, 4.5%-6.0% interest, 50% of property value.');
+                    return;
+                }
+                break;
+            default:
+                alert("Please select a valid loan type.");
                 return;
-            } else if (r < 0.025 || r > 0.05) {
-                alert('The interest rate for a first home loan should be between 2.5% and 5.0%');
-                return;
-            } else if (P > maxAmount) {
-                alert('The maximum amount for a first home loan is 80% of the value of the property');
-                return;
-            } else {
-                n = n / 12;
-                const M = P * ((r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1));
-                setMonthlyPayment(M);
-            }
-        } else if (loanTypeValue === 2) {
-            maxAmount = pValue * 0.7;
-            if (termYears > 20) {
-                alert('The maximum term for a second home loan is 20 years');
-                return;
-            } else if (r < 0.04 || r > 0.06) {
-                alert('The interest rate for a second home loan should be between 4.0% and 6.0%');
-                return;
-            } else if (P > maxAmount) {
-                alert('The maximum amount for a second home loan is 70% of the value of the property');
-                return;
-            } else {
-                n = n / 12;
-                const M = P * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-                setMonthlyPayment(M);
-            }
-        } else if (loanTypeValue === 3) {
-            maxAmount = pValue * 0.6;
-            if (termYears > 25) {
-                alert('The maximum term for a commercial property loan is 25 years');
-                return;
-            } else if (r < 0.05 || r > 0.07) {
-                alert('The interest rate for a commercial property loan should be between 5.0% and 7.0%');
-                return;
-            } else if (P > maxAmount) {
-                alert('The maximum amount for a commercial property loan is 60% of the value of the property');
-                return;
-            } else {
-                n = n / 12;
-                const M = P * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-                setMonthlyPayment(M);
-            }
-        } else if (loanTypeValue === 4) {
-            maxAmount = pValue * 0.5;
-            if (termYears > 15) {
-                alert('The maximum term for a remodeling loan is 15 years');
-                return;
-            } else if (r < 0.045 || r > 0.06) {
-                alert('The interest rate for a remodeling loan should be between 4.5% and 6.0%');
-                return;
-            } else if (P > maxAmount) {
-                alert('The maximum amount for a remodeling loan is 50% of the value of the property');
-                return;
-            } else {
-                n = n / 12;
-                const M = P * (r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1);
-                setMonthlyPayment(M);
-            }
         }
+
+        const M = P * ((r * Math.pow(1 + r, n)) / (Math.pow(1 + r, n) - 1));
+        setMonthlyPayment(M);
     };
 
     return (
@@ -156,11 +126,11 @@ const Simulator = () => {
                     </Select>
                 </FormControl>
                 <Button
-                type="submit"
-                fullWidth
-                variant="contained"
-                sx={{ backgroundColor: "#2d53ff" }}
-                startIcon={<SendIcon />}
+                    type="submit"
+                    fullWidth
+                    variant="contained"
+                    sx={{ backgroundColor: "#2d53ff" }}
+                    startIcon={<SendIcon />}
                 >
                     Calculate Monthly Fee
                 </Button>
