@@ -15,7 +15,7 @@ pipeline{
                 dir("TingesoFrontend"){
                     script{
                          withDockerRegistry(url: 'https://index.docker.io/v1/', credentialsId: 'jenkins-token') {
-                            bat "docker build -t sof1215/tingesofrontend ."
+                            bat "docker build --no-cache -t sof1215/tingesofrontend ."
                             bat "docker push sof1215/tingesofrontend"
                         }
                     }                    
