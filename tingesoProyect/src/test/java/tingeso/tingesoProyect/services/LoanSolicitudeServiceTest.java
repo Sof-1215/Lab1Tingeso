@@ -30,7 +30,7 @@ class LoanSolicitudeServiceTest {
     }
 
     @Test
-    void testCreate() throws IOException {
+    void WhenCreate_thenCorrect() throws IOException {
         //Given
         String rutUser = "12345678-9";
         Long idMortgageLoan = 1L;
@@ -83,7 +83,7 @@ class LoanSolicitudeServiceTest {
     }
 
     @Test
-    void testCreateWithNullFiles() throws IOException {
+    void WhenCreateWithNullFiles_thenCorrect() throws IOException {
         // Arrange: Datos de prueba
         String rutUser = "12345678-9";
         Long idMortgageLoan = 1L;
