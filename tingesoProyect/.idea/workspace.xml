@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="cfdeaae1-6092-420f-aba7-e4b3faf610e2" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/32abf1fb-9e1a-4278-b986-96e509d2c785/storage_v2/_src_/database/TingesoDB.cadFsg/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/32abf1fb-9e1a-4278-b986-96e509d2c785/storage_v2/_src_/database/TingesoDB.cadFsg/schema/public.abK9xQ.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-tingeso.tingesoProyect.services.LoanSolicitudeServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-tingeso.tingesoProyect.services.LoanSolicitudeServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-tingeso.tingesoProyect.services.MortgageLoanServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-tingeso.tingesoProyect.services.MortgageLoanServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/TEST-tingeso.tingesoProyect.services.UserServiceTest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/TEST-tingeso.tingesoProyect.services.UserServiceTest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/tingeso.tingesoProyect.services.LoanSolicitudeServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/tingeso.tingesoProyect.services.LoanSolicitudeServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/tingeso.tingesoProyect.services.MortgageLoanServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/tingeso.tingesoProyect.services.MortgageLoanServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/surefire-reports/tingeso.tingesoProyect.services.UserServiceTest.txt" beforeDir="false" afterPath="$PROJECT_DIR$/target/surefire-reports/tingeso.tingesoProyect.services.UserServiceTest.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tingesoProyect.jar" beforeDir="false" afterPath="$PROJECT_DIR$/target/tingesoProyect.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/tingesoProyect.jar.original" beforeDir="false" afterPath="$PROJECT_DIR$/target/tingesoProyect.jar.original" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "git-widget-placeholder": "Merging main"
+  }
+}]]></component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="LAST_COMMIT_MESSAGE" value="" />
+  </component>
+</project>
