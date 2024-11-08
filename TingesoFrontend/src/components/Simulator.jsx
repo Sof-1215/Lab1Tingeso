@@ -132,7 +132,7 @@ const Simulator = () => {
                     sx={{ backgroundColor: "#2d53ff" }}
                     startIcon={<SendIcon />}
                 >
-                    Calculate Monthly Fee
+                    Calcular cuota mensual
                 </Button>
             </form>
 
